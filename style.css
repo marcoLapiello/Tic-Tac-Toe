@@ -9,6 +9,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
+}
+
+h1 {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    
 }
 
 table {
@@ -22,8 +33,13 @@ td {
     text-align: center;
     vertical-align: middle;
     font-size: 2em;
-    border: 2px solid white; /* Inner borders */
+    border: 2px solid white;
     color: white;
+}
+
+td:hover {
+    background-color: rgba(255, 255, 255, 0.308);
+    cursor: pointer;
 }
 
 
