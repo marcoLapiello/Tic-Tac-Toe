@@ -1,0 +1,41 @@
+body {
+    background-color: #323232;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#gameBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+table {
+    
+    border-collapse: collapse;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2em;
+    border: 2px solid white; /* Inner borders */
+    color: white;
+}
+
+
+td:first-child, td:last-child {
+    border-left: none;
+    border-right: none;
+}
+
+tr:first-child td {
+    border-top: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
