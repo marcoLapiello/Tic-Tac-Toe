@@ -1,57 +1,84 @@
 body {
-    background-color: #323232;
-    margin: 0;
-    font-family: Arial, sans-serif;
+  background-color: #323232;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 #gameBoard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 h1 {
-    position: absolute;
-    top: 150px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: white;
-    
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
 }
 
 table {
-    
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 td {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 2em;
-    border: 2px solid white;
-    color: white;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2em;
+  border: 2px solid white;
+  color: white;
 }
 
 td:hover {
-    background-color: rgba(255, 255, 255, 0.308);
-    cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.308);
+  cursor: pointer;
 }
 
-
-td:first-child, td:last-child {
-    border-left: none;
-    border-right: none;
+td:first-child,
+td:last-child {
+  border-left: none;
+  border-right: none;
 }
 
 tr:first-child td {
-    border-top: none;
+  border-top: none;
 }
 
 tr:last-child td {
-    border-bottom: none;
+  border-bottom: none;
+}
+
+#playerIndicators {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 250px;
+  left: 0;
+  right: 0;
+}
+
+.player-indicator {
+  display: flex;
+  gap: 20px;
+}
+
+.player-indicator div {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+
+.highlight {
+  box-shadow: 0px 0px 15px 5px #ffc003;
+
+  border-radius: 50%;
 }
