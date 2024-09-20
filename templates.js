@@ -70,10 +70,19 @@ function getPlayersTemplate() {
 }
 
 function getEndTemplate() {
-  return /*html*/ `
-      ${currentPlayer} wins!
-      <button id="endBtn" onclick="playAgain()">Play again</button>
-    `;
+  if (currentPlayer === "Nobody") {
+    return /*html*/`
+        ${currentPlayer}<br>wins!
+        <button id="endBtn" onclick="playAgain()">Play again</button>
+    `
+  } else {
+    return /*html*/ `
+    ${currentPlayer === "cross" ? createCrossSVG() : createCircleSVG()} <br>wins!
+    <button id="endBtn" onclick="playAgain()">Play again</button>
+  `
+  }
+  
+ 
 }
 
 function getWinningLineTemplate(startX, startY, endX, endY, lineColor){
