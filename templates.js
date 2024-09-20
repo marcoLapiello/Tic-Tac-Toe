@@ -75,3 +75,15 @@ function getEndTemplate() {
       <button id="endBtn" onclick="playAgain()">Play again</button>
     `;
 }
+
+function getWinningLineTemplate(startX, startY, endX, endY, lineColor){
+    return /*html*/`
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+      <line x1="${startX}" y1="${startY}" x2="${endX}" y2="${endY}"
+            stroke="${lineColor}" stroke-width="40" stroke-linecap="round">
+        <animate attributeName="x2" from="${startX}" to="${endX}" dur="0.4s" fill="freeze"/>
+        <animate attributeName="y2" from="${startY}" to="${endY}" dur="0.4s" fill="freeze"/>
+      </line>
+    </svg>
+    `
+}
