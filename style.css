@@ -7,17 +7,14 @@ body {
 #gameBoard {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: start;
+  min-height: calc(100vh - 400px);
 }
 
 h1 {
-  position: absolute;
-  top: 150px;
-  left: 0;
-  right: 0;
   text-align: center;
   color: white;
+  font-size: 48px;
 }
 
 table {
@@ -53,14 +50,18 @@ tr:last-child td {
   border-bottom: none;
 }
 
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  min-height: 400px;
+}
+
 #playerIndicators {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  position: absolute;
-  top: 250px;
-  left: 0;
-  right: 0;
 }
 
 .player-indicator {
