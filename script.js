@@ -128,7 +128,10 @@ function noWinner() {
   if (boardState.includes(null)) {
     return false;
   } else {
-    currentPlayer = "Nobody";
-    document.getElementById("end").innerHTML = getEndTemplate();
+    
+    document.getElementById("end").innerHTML = /*html*/`
+      <p>It's a draw!</p>
+      <button id="endBtn" onclick="playAgain()">Play again</button>
+    `;
   }
 }

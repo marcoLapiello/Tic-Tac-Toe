@@ -70,23 +70,16 @@ function getPlayersTemplate() {
 }
 
 function getEndTemplate() {
-  if (currentPlayer === "Nobody") {
-    return /*html*/`
-        ${currentPlayer}<br>wins!
-        <button id="endBtn" onclick="playAgain()">Play again</button>
-    `
-  } else {
-    return /*html*/ `
-    ${currentPlayer === "cross" ? createCrossSVG() : createCircleSVG()} <br>wins!
+  return /*html*/ `
+    ${
+      currentPlayer === "cross" ? createCrossSVG() : createCircleSVG()
+    } <br>wins!
     <button id="endBtn" onclick="playAgain()">Play again</button>
-  `
-  }
-  
- 
+  `;
 }
 
-function getWinningLineTemplate(startX, startY, endX, endY, lineColor){
-    return /*html*/`
+function getWinningLineTemplate(startX, startY, endX, endY, lineColor) {
+  return /*html*/ `
         <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
       <line x1="${startX}" y1="${startY}" x2="${endX}" y2="${endY}"
             stroke="${lineColor}" stroke-width="40" stroke-linecap="round">
@@ -94,5 +87,5 @@ function getWinningLineTemplate(startX, startY, endX, endY, lineColor){
         <animate attributeName="y2" from="${startY}" to="${endY}" dur="0.4s" fill="freeze"/>
       </line>
     </svg>
-    `
+    `;
 }
